@@ -4,20 +4,18 @@
 #include <math.h>
 
 typedef struct color {
-  unsigned int R;
-  unsigned int G;
-  unsigned int B;
-  unsigned int W;
+  uint8_t R;
+  uint8_t  G;
+  uint8_t B;
+  uint8_t W;
 } color;
 
 typedef struct colorhsl {
-  unsigned int H;
-  unsigned int S;
-  unsigned int L;
+  uint8_t H;
+  uint8_t S;
+  uint8_t L;
 } colorhsl;
 
-
-int getcolor(color* couleur);
 void HSLtoRGB(colorhsl* couleur1, color* couleurtransformer);
 colorhsl* RGBtoHSL(color* couleur1);
 

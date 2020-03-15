@@ -1,31 +1,30 @@
 #include "colortheorie.h"
 
-int getcolor(color* couleur) {
-  return (couleur->R, couleur->G, couleur->B, couleur->W);
-}
 
 
+/*
 color* HSLtoRGB(colorhsl* couleur1){
   color* couleurconverti = malloc(sizeof(color));
   int H = couleur1->H;
   int S = couleur1->S;
   int L = couleur1->L;
   float s=S/100;
-  float l=L/100;
+  float l= L/100;
   float h=H/360;
-  float R, G, B;
+  float R, G, Bl;
+  float temporary_1;
   
   if (L==0) {
     rgb=255*l;
     R = rgb;
     G = rgb;
-    B = rgb;
+    Bl = rgb;
   }
   else if (L<50){
-      float temporary_1 = l*(1 + s);
+      temporary_1 = l*(1 + s);
   }
   else{
-      float temporary_1 = l + s – l*s
+      temporary_1 =l+s–l*s;
   }
 
 
@@ -71,16 +70,16 @@ color* HSLtoRGB(colorhsl* couleur1){
   
 // Blue
   if(6*temporary_B<1){
-      B=temporary_2 + (temporary_1 – temporary_2) * 6 * temporary_B;
+      Bl=temporary_2 + (temporary_1 – temporary_2) * 6 * temporary_B;
   }
   else if(2*temporary_B<1){
-      B=temporary_1;
+      Bl=temporary_1;
   }
-  else if(3* temporary_B<2){
-      B=temporary_2 + (temporary_1 – temporary_2) * (0.666 – temporary_B) * 6;
+  else if((3 * temporary_B) < 2){
+      Bl = temporary_2 + ((temporary_1 – temporary_2) * (0.666 – temporary_B) * 6);
   }
   else{
-      B=temporary_2;
+      Bl=temporary_2;
   }
   couleurconverti->R = R*255;
   couleurconverti->G = G*255;
@@ -89,7 +88,7 @@ color* HSLtoRGB(colorhsl* couleur1){
 }
 
 colorhsl* RGBtoHSL(color* couleur1) {
-  colorhsl* couleurconverti = malloc(sizeof(colorhsl));
+  colorhsl* couleurconverti = malloc(1*sizeof(colorhsl));
   int R = couleur1->R;
   int G = couleur1->G;
   int B = couleur1->B;
@@ -130,3 +129,4 @@ colorhsl* RGBtoHSL(color* couleur1) {
 
   return couleurconverti;
 }
+*/
