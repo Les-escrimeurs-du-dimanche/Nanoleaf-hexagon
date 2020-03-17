@@ -1,11 +1,7 @@
 #include "gestionhexagon.h"
 
 uint32_t getcolor(color* couleur) {
-  uint32_t nombre = (couleur->R << 0);
-  nombre +=(couleur->G << 8) ;
-  nombre += (couleur->B << 16);
-  nombre += (couleur->W << 24);
-  return nombre;
+    return ((uint32_t)couleur->W << 24) | ((uint32_t)couleur->R << 16) | ((uint32_t)couleur->G <<  8) | couleur->B;
 }
 
 void setcolor(int num, color* couleur, Adafruit_NeoPixel pixels){
